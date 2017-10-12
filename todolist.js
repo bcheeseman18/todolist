@@ -19,9 +19,12 @@ window.addEventListener('load', function load(event){
             let toDoText = $(this).val();  
             $(this).val(""); 
             //create new li and add to ul
-            $('ul').append("<li><span>X</span> " + toDoText + "</li>"); 
+            $('ul').append("<li><span><i class='fa fa-trash-o' aria-hidden='true'></i></span> " + toDoText + "</li>"); 
         }
     }); 
 
+    $('.fa-plus').click(function(){
+        $("input[type='text']").fadeToggle(); 
+    }); 
 
 }); 
